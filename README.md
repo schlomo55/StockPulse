@@ -38,12 +38,10 @@ Each stock contains:
 
 ## ⚙️ Setup & Installation
 
-Before running the project, you must create a **`.env` file** in the project root containing your Polygon.io API key and HTTP client settings:
+Before running the project, note that a `.env` file is already included in the project. You only need to update it with your own Polygon.io API key :
 
 ```bash
 POLYGON_API_KEY=your_key_here
-HTTP_TIMEOUT_SECONDS=10.0
-HTTP_MAX_RETRIES=2
 ```
 
 You can then run the project in **two different ways**: either with a **Local Setup** or using **Docker**.
