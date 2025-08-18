@@ -11,9 +11,6 @@ __pycache__/
 .idea/
 .vscode/
 
-# Environment files (do not commit secrets)
-.env
-
 # Logs
 logs/*.log
 
