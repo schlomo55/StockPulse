@@ -1,4 +1,4 @@
-# Stocks REST API (CIAL DnB Backend Assignment)
+# Stocks REST API 
 
 This project implements a **Python REST API** for retrieving and managing stock data.
 It aggregates data from two sources:
@@ -38,7 +38,15 @@ Each stock contains:
 
 ## ⚙️ Setup & Installation
 
-You can run the project in **two different ways**: either with a **Local Setup** or using **Docker**.
+Before running the project, you must create a **`.env` file** in the project root containing your Polygon.io API key and HTTP client settings:
+
+```bash
+POLYGON_API_KEY=your_key_here
+HTTP_TIMEOUT_SECONDS=10.0
+HTTP_MAX_RETRIES=2
+```
+
+You can then run the project in **two different ways**: either with a **Local Setup** or using **Docker**.
 
 ### Option 1: Local Setup
 
@@ -53,9 +61,7 @@ You can run the project in **two different ways**: either with a **Local Setup**
 # 1. Clone repo & install dependencies
 pip install -r requirements.txt
 
-# 2. Create .env in project root
-echo "POLYGON_API_KEY=your_key_here" > .env
-
+# 2. Ensure .env is in project root
 # 3. Run API
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
@@ -64,8 +70,10 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 
 ```bash
 docker build -t stocks-api .
+
 docker run --rm -p 8000:8000 stocks-api
 ```
+
 ---
 
 ## Accessing the API
@@ -73,6 +81,7 @@ docker run --rm -p 8000:8000 stocks-api
 Now visit:
 
 * Swagger UI → [http://localhost:8000/docs](http://localhost:8000/docs)
+
 * ReDoc → [http://localhost:8000/redoc](http://localhost:8000/redoc)
 
 ---

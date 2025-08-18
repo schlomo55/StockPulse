@@ -7,12 +7,7 @@ Prerequisites
 - A config file with your Polygon.io API key (see below)
 
 Create a Config File
-1) In the project root, copy `.env.example` to `.env` and fill the values:
-   - Windows PowerShell:
-     Copy-Item .env.example .env
-   - Linux/macOS:
-     cp .env.example .env
-2) Edit `.env` and set:
+1) In the project root, create a new `.env` file with the following content:
 ```
 POLYGON_API_KEY=your_polygon_api_key_here
 HTTP_TIMEOUT_SECONDS=10.0
