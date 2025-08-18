@@ -53,7 +53,6 @@ You can then run the project in **two different ways**: either with a **Local Se
 #### Requirements
 
 * Python **3.12+**
-* Polygon.io API key
 
 #### Steps
 
