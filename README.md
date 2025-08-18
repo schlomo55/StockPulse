@@ -14,7 +14,7 @@ Built with **FastAPI**, **httpx (async)**, and **BeautifulSoup**. Includes **uni
 
 ## 📌 Features
 
-* **GET /stock/{symbol}** → Returns combined stock data (Polygon + MarketWatch + tracked amount)
+* **GET /stock/{symbol}** → Returns combined stock data (Polygon + MarketWatch + tracked amount). Optionally, you can add a date query parameter to fetch data for a specific trading day
 * **POST /stock/{symbol}** → Updates stock position (buy/sell) and returns current amount with LONG/SHORT/NEUTRAL status
 
 ### Stock Model (as required in assignment)
@@ -93,10 +93,10 @@ Now visit:
 curl http://localhost:8000/stock/AAPL
 ```
 
-**Get stock data for a specific date:**
+**Get stock data for a specific date (OPTIONAL):**
 
 ```bash
-curl "http://localhost:8000/stock/AAPL?date=2024-01-15"
+curl http://localhost:8000/stock/AAPL?date=2024-01-15
 ```
 
 **Update stock position:**
