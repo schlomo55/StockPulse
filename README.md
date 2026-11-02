@@ -38,9 +38,11 @@ Each stock contains:
 
 ## ⚙️ Setup & Installation
 
-Before running the project, note that a `.env` file is already included in the project. You only need to update it with your own Polygon.io API key :
+Before running the project, create your local `.env` from the provided template and set your own Polygon.io API key (`.env` is git-ignored):
 
 ```bash
+cp .env.example .env
+# then edit .env:
 POLYGON_API_KEY=your_key_here
 ```
 
@@ -68,7 +70,8 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 ```bash
 docker build -t stocks-api .
 
-docker run --rm -p 8000:8000 stocks-api
+# Requires the .env created above (cp .env.example .env)
+docker run --rm -p 8000:8000 --env-file .env stocks-api
 ```
 
 ---

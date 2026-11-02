@@ -7,7 +7,7 @@ Prerequisites
 - A config file with your Polygon.io API key (see below)
 
 Create a Config File
-1) In the project root, create a new `.env` file with the following content:
+1) In the project root, create your `.env` from the template: `cp .env.example .env` (`.env` is git-ignored, so it is not part of the repository). Then set your key. The file should look like:
 ```
 POLYGON_API_KEY=your_polygon_api_key_here
 HTTP_TIMEOUT_SECONDS=10.0
